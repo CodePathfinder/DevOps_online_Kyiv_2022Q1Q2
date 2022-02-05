@@ -6,17 +6,17 @@
 
 1. **Main** section completed
 
-![Main](/DevOps_online_Kyiv_2022Q1Q2\m1\task1.1\images\main.png)
+![Main](images/main.png)
 
 2. **Remote** section completed
 
-![Remote](/DevOps_online_Kyiv_2022Q1Q2\m1\task1.1\images\remote.png)
+![Remote](images/remote.png)
 
 ### Private repo on GitHub
 
 Private repo [CodePathfinder/DevOps_online_Kyiv_2022Q1Q2](https://github.com/CodePathfinder/DevOps_online_Kyiv_2022Q1Q2) is created on GitHub.
 
-This [README.md file](https://github.com/CodePathfinder/DevOps_online_Kyiv_2022Q1Q2/tree/develop/m1/task1.1/README.md) in the repository.
+This [README.md file](https://github.com/CodePathfinder/DevOps_online_Kyiv_2022Q1Q2/tree/master/m1/task1.1/README.md) in the repository.
 
 ### _Git Merge_ and other repository commands
 
@@ -24,17 +24,17 @@ This [README.md file](https://github.com/CodePathfinder/DevOps_online_Kyiv_2022Q
 
 Example of no-conflict merge -- fast-forward
 
-![Merge of Images into Develop. Fast-forward](/DevOps_online_Kyiv_2022Q1Q2\m1\task1.1\images\merge-images-develop-fast-forward.png)
+![Merge of Images into Develop. Fast-forward](images/merge-images-develop-fast-forward.png)
 
 2. Merge of branch **_styles_** into branch **_develop_**.
 
 - Example of merge conflict
 
-![Merge Conflict Stayles Develop](/DevOps_online_Kyiv_2022Q1Q2\m1\task1.1\images\merge-conflict-styles-develop.png)
+![Merge Conflict Stayles Develop](images/merge-conflict-styles-develop.png)
 
 - Resolved merge conflict
 
-![Merge Conflict Resolved](/DevOps_online_Kyiv_2022Q1Q2\m1\task1.1\images\merge-conflict-resolved.png)
+![Merge Conflict Resolved](images/merge-conflict-resolved.png)
 
 3. Inspect repository with different `git log` commands.
 
@@ -51,7 +51,7 @@ Samples:
 
 Snapshot of commands `git log images..master` and `git log --decorate --oneline --graph` with respective outputs is shown below:
 
-![Git Log Options](/DevOps_online_Kyiv_2022Q1Q2\m1\task1.1\images\git-log-options.png)
+![Git Log Options](images/git-log-options.png)
 
 4. Push all branches to origin
 
@@ -59,11 +59,11 @@ Snapshot of commands `git log images..master` and `git log --decorate --oneline 
 git push origin --all
 ```
 
-![Git Push Origin All](/DevOps_online_Kyiv_2022Q1Q2\m1\task1.1\images\git-push-origin-all.png)
+![Git Push Origin All](images/git-push-origin-all.png)
 
 5. Execute command `git reflog`.
 
-_File task1.1_GIT.txt_ is created and added [here](/DevOps_online_Kyiv_2022Q1Q2\m1\task1.1\task1.1_GIT.txt).
+_File task1.1_GIT.txt_ is created and added [here](task1.1_GIT.txt).
 
 ### Describe in your own words what DevOps is
 
