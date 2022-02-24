@@ -2,7 +2,7 @@
 
 ## TASK 2.2
 
-### Launce an instance (AMI) and volumes (EC2) [4]
+### Launch an instance (AMI) and volumes (EC2) [4]
 
 ![AMI-created-with-volumes](images/AMI-created-with-volumes.png)
 
