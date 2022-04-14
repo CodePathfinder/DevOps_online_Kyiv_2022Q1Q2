@@ -17,11 +17,11 @@
 2. Examine the pstree command. Make output (highlight) the chain (ancestors) of the current
    process.
 
-Command `pstree` with flag '-H' or '-h' displays a tree of processes and highlights the current process and its ancestors:
+Command `pstree` with options '-H' or '-h' displays a tree of processes and highlights the current process and its ancestors:
 
 ![pstree](images/4.3-p1-2-pstree-h.png)
 
-Other useful flags (-p, -T, -s):
+Other useful options (-p, -T, -s):
 
 `pstree -p <username>` - shows PID for processes filtered by username.
 
@@ -69,6 +69,8 @@ Some other files in '/proc' filesystem may be:
 `grep "cpu" /proc/cpuinfo`
 
 ![cpu info](images/4.3-p1-4-cpuinfo.png)
+
+Alternatively: `lscpu`
 
 5. Use the ps command to get information about the process. The information should be as
    follows: the owner of the process, the arguments with which the process was launched for
