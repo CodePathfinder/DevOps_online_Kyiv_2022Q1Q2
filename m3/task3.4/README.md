@@ -36,4 +36,4 @@
 
 [Task3.4_dns.pkt](Task3.4_dns.pkt)
 
-### 3. Additional Task: Configuration of Dynamic Routing. Check connection with `ping` and `tracert`
+### 3. Additional Task: Configuration of Port Forwarding on Home Router [9 - 13]
