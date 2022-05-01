@@ -6,11 +6,23 @@
 
 1. What are the most popular hypervisors for infrastructure virtualization?
 
-TBA
+- KVM (Kernel-Based Virtual Machine) / RHEV (Red Hat Enterprise Virtualization)
+- Xen / Citrix XenServer
+- Microsoft Windows Server 2012 Hyper-V
+- VMware vSphere / ESXi
 
 2. Briefly describe the main differences of the most popular hypervisors.
 
-TBA
+KVM (or Kernel-Based Virtual Machine) is a Linux-based type-1 hypervisor that can be added to a most Linux operating systems including Ubuntu, SUSE, and Red Hat Enterprise Linux. It supports most common Linux operating systems, Solaris, and Windows. RHEV is a commercial implementation of the KVM Type-1 hypervisor. RHEV offers support the advanced features for example: VLAN, live migration, policy-based workload balancing, image management. Hosts support up to 160 cores and 2 TB of RAM. Guests support up to 64 vCPUs and 512 GB of RAM.
+
+Xen is a type-1 bare-metal hypervisor. XenServer is a commercial tier-1 hypervisor solution from Citrix. XenServer offers features such as Integration System Center Virtual Machine Manager, Snapshot and revert, XenCenter Management Console, Live migration, Live storage migration, Distributed virtual switch, Monitoring and alerting, etc.
+
+Windows Server 2012 Hyper-V. Hyper-V is available in both a free edition (with no GUI and no virtualization rights) and 4 commercial editions – Foundations, Essentials, Standard, and Datacenter. Hyper-V offers Live migration, Storage migration, VM Replication, Dynamic memory, Extensible virtual switch etc.
+Scale up to 320 logical processors, 4TB of memory, 2,048 virtual CPUs per host, 64 vCPUs per VM, 1TB of memory per VM, and 64 nodes / 8000 VMs per cluster.
+
+VMware is Tier-1 hypervisor available in a free edition and 5 commercial editions.
+Free vSphere hypervisor has a graphical interface (the vSphere Client) and memory over-commitment, and has the limitation of supporting up to 32GB of RAM per physical server. The commercial versions of vSphere include lots of features including: Storage vMotion, vSphere Data Protection (for backup and recovery),vSphere Replication, vShield Endpoint protection (the option to use agentless anti-virus solutions), Hot add of memory and hot plug for CPU,
+Distributed resource scheduler (DRS) for VM “load balancing”, Distributed virtual switch (dvSwitch), Autodeploy, Scale up to 512 VMs per host, up to 2048 vCPUs per host, up to 64 vCPUS and 1TB of vRAM per VM, etc.
 
 ### PART 2. WORK WITH VIRTUALBOX
 
@@ -62,17 +74,14 @@ TBA
 
 - Network modes
 
-TBA
-
 Networking Modes Tests:
 
-| mode        | VM -> Host | VM <- Host | VM1 <-> VM2 | VM -> Net | VM <- NET |
-| :---------- | :--------: | :--------: | :---------: | :-------: | :-------: |
-| NAT         |     +      |  port fwd  | :---------- |     +     | :-------- |
-| Bridged     |     +      |     +      | :---------- |     +     | :-------- |
-| Internal    |     -      |     -      |      +      |     -     | :-------- |
-| Host-Only   | :--------- | :--------- | :---------- | :-------- | :-------- |
-| NAT network | :--------- | :--------- | :---------- | :-------- | :-------- |
+| mode      | VM -> Host | VM <- Host | VM1 <-> VM2 | VM -> Net | VM <- NET |
+| :-------- | :--------: | :--------: | :---------: | :-------: | :-------: |
+| NAT       |     +      |  port fwd  |      -      |     +     | port fwd  |
+| Bridged   |     +      |     +      |     (?)     |     +     |     +     |
+| Internal  |     -      |     -      |      +      |     -     |     -     |
+| Host-Only |     +      |     +      |     (?)     |     -     |     -     |
 
 Add static IP address to VM (internal network):
 
