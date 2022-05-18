@@ -22,7 +22,7 @@ Database schema in Workbench:
 
 Create database blog: `CREATE DATABASE blog;`
 
-Shift to the created database `USE blog;`
+Shift to the created database: `USE blog;`
 
 Example of table creation:
 
