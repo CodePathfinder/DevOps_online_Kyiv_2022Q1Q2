@@ -1,9 +1,6 @@
-tmp-helper/
 tcpdump
 Bridged/
-m16
 __pycache__/
 venv/
-k8s
-terraform
 .vscode/
+tmp
