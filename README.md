@@ -4,7 +4,7 @@
 
 ### Final Project: CICD pipeline
 
-- [Presentation in PDF](final_project/Project_Presentation.pdf)
+- [Presentation in PDF](final_project/FinalProject_Presentation.pdf)
 
 - [Final Project code](https://github.com/CodePathfinder/cicd_project.git)
 
