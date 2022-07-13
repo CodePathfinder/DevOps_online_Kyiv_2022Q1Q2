@@ -227,7 +227,7 @@ The `ls` command lists information about the files (the current directory by def
 - in this subdirectory create a file containing information about directories located in
   the root directory (using I/O redirection operations);
 
-  `ls -l / > inforootdir.txt`
+  `ls -l / > subdir/inforootdir.txt`
 
 - view the created file;
 
@@ -236,6 +236,7 @@ The `ls` command lists information about the files (the current directory by def
 - copy the created file to your home directory using relative and absolute addressing.
 
   `cp subdir/inforootdir.txt ~/`
+  `cp /home/cpf/subdir/inforootdir.txt /home/cpf/`
 
 - delete the previously created subdirectory with the file requesting removal;
 
@@ -404,7 +405,7 @@ Regular files are ordinary files on a system that contains programs, texts, or d
 
 - Directory Files ("d")
 
-Thedirectory files store the other regular files, directory files, and special files and their related information. A directory file contains an entry for every file and sub-directory that it houses. Command to create directory file: `mkdir`.
+The directory files store the other regular files, directory files, and special files and their related information. A directory file contains an entry for every file and sub-directory that it houses. Command to create directory file: `mkdir`.
 
 - Block Files ("b")
 

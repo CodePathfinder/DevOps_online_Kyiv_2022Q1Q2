@@ -8,21 +8,34 @@
 
 - KVM (Kernel-Based Virtual Machine) / RHEV (Red Hat Enterprise Virtualization)
 - Xen / Citrix XenServer
-- Microsoft Windows Server 2012 Hyper-V
+- Microsoft Hyper-V
 - VMware vSphere / ESXi
 
 2. Briefly describe the main differences of the most popular hypervisors.
 
-KVM (or Kernel-Based Virtual Machine) is a Linux-based type-1 hypervisor that can be added to a most Linux operating systems including Ubuntu, SUSE, and Red Hat Enterprise Linux. It supports most common Linux operating systems, Solaris, and Windows. RHEV is a commercial implementation of the KVM Type-1 hypervisor. RHEV offers support the advanced features for example: VLAN, live migration, policy-based workload balancing, image management. Hosts support up to 160 cores and 2 TB of RAM. Guests support up to 64 vCPUs and 512 GB of RAM.
+A hypervisor abstracts operating systems and applications from their underlying hardware.
 
-Xen is a type-1 bare-metal hypervisor. XenServer is a commercial tier-1 hypervisor solution from Citrix. XenServer offers features such as Integration System Center Virtual Machine Manager, Snapshot and revert, XenCenter Management Console, Live migration, Live storage migration, Distributed virtual switch, Monitoring and alerting, etc.
+A Type 1 hypervisor runs directly on the host machine's physical hardware, and it's referred to as a bare-metal hypervisor. The Type 1 hypervisor doesn't have to load an underlying OS. With direct access to the underlying hardware and no other software -- such as OSes and device drivers, Type 1 hypervisors are regarded as the most efficient and best-performing hypervisors available for enterprise computing. Hypervisors that run directly on physical hardware are also highly secure. Virtualization mitigates the risk of attacks that target security flaws and vulnerabilities in OSes because each guest has its own OS. This ensures an attack on a guest VM is logically isolated to that VM and can't spread to others running on the same hardware. Type 1 hypervisors are used for production-level workloads.
 
-Windows Server 2012 Hyper-V. Hyper-V is available in both a free edition (with no GUI and no virtualization rights) and 4 commercial editions – Foundations, Essentials, Standard, and Datacenter. Hyper-V offers Live migration, Storage migration, VM Replication, Dynamic memory, Extensible virtual switch etc.
-Scale up to 320 logical processors, 4TB of memory, 2,048 virtual CPUs per host, 64 vCPUs per VM, 1TB of memory per VM, and 64 nodes / 8000 VMs per cluster.
+A Type 2 hypervisor is typically installed on top of an existing OS. It is sometimes called a hosted hypervisor because it relies on the host machine's preexisting OS to manage calls to CPU, memory, storage and network resources. The presence of an underlying OS with Type 2 hypervisors introduces unavoidable latency; all of the hypervisor's activities and the work of every VM has to pass through the host OS. Also, any security flaws or vulnerabilities in the host OS could potentially compromise all of the VMs running above it. Type 2 hypervisors are generally not used for data center computing and are reserved for client or end-user systems
 
-VMware is Tier-1 hypervisor available in a free edition and 5 commercial editions.
-Free vSphere hypervisor has a graphical interface (the vSphere Client) and memory over-commitment, and has the limitation of supporting up to 32GB of RAM per physical server. The commercial versions of vSphere include lots of features including: Storage vMotion, vSphere Data Protection (for backup and recovery),vSphere Replication, vShield Endpoint protection (the option to use agentless anti-virus solutions), Hot add of memory and hot plug for CPU,
-Distributed resource scheduler (DRS) for VM “load balancing”, Distributed virtual switch (dvSwitch), Autodeploy, Scale up to 512 VMs per host, up to 2048 vCPUs per host, up to 64 vCPUS and 1TB of vRAM per VM, etc.
+![server_virt-hypervisor](images/server_virt-hypervisor.png)
+
+Examples of Type 1 hypervisors:
+
+KVM (or Kernel-Based Virtual Machine) is open source virtualization architecture made for Linux distributions. RHEV is a commercial implementation of the KVM Type-1 hypervisor.
+
+XenServer is a commercial tier-1 hypervisor solution from Citrix. Amazon Web Services uses a customized version of the Xen hypervisor as the foundation for its Elastic Compute Cloud.
+
+Microsoft Hyper-V runs on Windows OSes.
+
+VMware vSphere includes the ESXi hypervisor and vCenter management software to provide a suite of virtualization products. VMware vSphere is geared toward enterprise data centers.
+
+Examples of Type 2 hypervisors:
+
+VirtualBox supports a variety of host OSes, such as Windows, Apple macOS, Linux and Oracle Solaris.
+
+VMware Workstation Pro and VMware Fusion. VMware Workstation Pro is a 64-bit hosted hypervisor capable of implementing virtualization on Windows and Linux systems. VMware Fusion is macOS compatible.
 
 ### PART 2. WORK WITH VIRTUALBOX
 
@@ -147,8 +160,6 @@ Ping example: `ping -c 5 reqres.in`
 - `vagrant status`
 - `vagrant destroy`
 
-TBA
+#### SSH connect to VM by MobaXterm
 
-= SSH connect by MobaXterm
-= 8. Create your own Vagrant box [7]
-= 9. (optional) Create a test environment from a few servers. Servers' parameters are chosen independently by the student.
+![Vagrant ssh](images/vagrant_ssh.png)

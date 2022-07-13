@@ -134,7 +134,7 @@ Screenshot 1:
 
    • ping from Client_1\* shall pass on 172.17.D+10.1, but shall not pass on 172.17.D+20.1
 
-NOTE: as both addresses (172.17.D+10.1, 172.17.D+20.1) are set on interface 'lo' of Client_1, pings presumably cannot pass through Server_1. Therefore, this assignment is done presuming that pings shall pass from Client_2 (instead of Client_1).
+\*NOTE: as both addresses (172.17.D+10.1, 172.17.D+20.1) are set on interface 'lo' of Client_1, pings presumably cannot pass through Server_1. Therefore, this assignment is done presuming that pings shall pass from Client_2 (instead of Client_1).
 
 Step 1. Configure Server_1 iptables: table 'filter', chain 'INPUT' to add rules re SSH connections
 

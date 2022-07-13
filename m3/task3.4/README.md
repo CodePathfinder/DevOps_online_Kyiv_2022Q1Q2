@@ -37,3 +37,19 @@
 [Task3.4_dns.pkt](Task3.4_dns.pkt)
 
 ### 3. Additional Task: Configuration of Port Forwarding on Home Router [9 - 13]
+
+- Add Home Server to Home Office network and set static IP address
+
+- Modify index.html for HTTP service on Home Server
+
+- Set Port Forwarding on Home Router
+
+- Add record for Home Server on DNS Server
+
+- Verify connection with domain3.com from Client 1 Desktop/Web Browser
+
+![port_forwarding](images/port_forwarding.png)
+
+#### Reference to Cisco Packet Tracer file (port forwarding)
+
+[Task3.4_port_forwarding.pkt](Task3.4_port_forwarding.pkt)

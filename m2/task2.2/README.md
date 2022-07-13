@@ -16,9 +16,28 @@
 
 ### Create and attach a Disk_D (EBS)
 
+- create new volume and attach it to the instance
+
 ![attached-disk-D](images/attached-disk-D.png)
 
-TBA: Create and save some file on Disk_D.
+- create filesystem: `sudo mkfs -t ext4 /dev/sdf`
+
+- create folder to which new volume shall be mounted: `sudo mkdir /mnt/disk_d`
+
+- mount temporarily new volume to the folder: `sudo mount /dev/sdf /mnt/disk_d`
+
+- mount permanently new volume adding line to /etc/fstab:
+  `echo "/dev/sdf /mnt/disk_d ext4 defaults 0 0" | sudo tee -a /etc/fstab`
+
+- check mounted disks/partitions: `df -h`
+
+### Create and save some file on Disk_D.
+
+```
+touch /mnt/disk_d/hello.txt
+echo "Hello world!" > /mnt/disk_d/hello.txt
+cat /mnt/disk_d/hello.txt
+```
 
 ### Launch the second instance from backup (EC2, EBS) [7]
 
@@ -36,15 +55,15 @@ TBA: Create and save some file on Disk_D.
 
 ### Detach Disk_D from the 1st instance and attach disk_D to the new instance (EBS) [8]
 
-#### Original state: Disk_D is attached to Task2.2 instance
+#### Original state: Disk_D is attached to 'Task2.2' instance
 
 ![Disk_D-attached-to-Task2.2-instance](images/Disk_D-attached-to-Task2.2-instance.png)
 
-#### Step 1. Detach Disk_D from Task2.2 instance
+#### Step 1. Detach Disk_D from 'Task2.2' instance
 
 ![Disk_D-dettached-from-Task2.2-instance](images/Disk_D-dettached-from-Task2.2-instance.png)
 
-#### Step 2. Disk_D is attached to another instance (MyFirstInstance)
+#### Step 2. Disk_D is attached to another instance ('MyFirstInstance')
 
 ![Disk_D-attached-to-MyFirstInstance](images/Disk_D-attached-to-MyFirstInstance.png)
 
