@@ -348,9 +348,14 @@ Security Measures when SSH is used:
 
 3. List the options for choosing keys for encryption in SSH. Implement 3 of them.
 
-Option '-t' of `ssh-keygen` command specifies the type of key to create.The possible values are “dsa”, “ecdsa”, “ecdsa-sk”, “ed25519”, “ed25519-sk”, or “rsa”.
+Example of `ssh-keygen` command with options:
+`ssh-keygen -t rsa -b 4096 -f ~/.ssh/vps-cloud.web-server.key -C "My web-server key"`
 
-`ssh keygen -t <dsa | ecdsa | ecdsa-sk | ed25519 | ed25519-sk | rsa>`
+Where,
+-t rsa : type of key to create. The possible values are “rsa1”, “dsa”, “ecdsa”, “ed25519”, or “rsa” for protocol version 2;
+-b 4096 : Specifies the number of bits in the key to create;
+-f ~/.ssh/vps-cloud.web-server.key : Specifies the filename of the key file;
+-C "My web-server key" : Set a new comment.
 
 4. Implement port forwarding for the SSH client from the host machine to the guest Linux
    virtual machine behind NAT.
