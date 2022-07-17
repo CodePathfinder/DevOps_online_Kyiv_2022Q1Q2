@@ -342,7 +342,7 @@ Security Measures when SSH is used:
 
 - Minimize permissions: `chmod 0700 $HOME/.ssh` - only owner may access the .ssh hidden directory.
 - Use passwords based authentication or public key based authentication (with or withour passphrase).
-- Configure ssh-keygen options: specifies number of bits in the key (which '-t') and type of key (with '-t').
+- Configure ssh-keygen options: specifies number of bits in the key (with '-b' option) and type of key (with '-t' option).
 - Configure the Ubuntu Linux firewall (ufw).
 - Do not disclose the secret key.
 
